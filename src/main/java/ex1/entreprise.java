@@ -4,12 +4,15 @@ import java.util.Date;
 
 public class entreprise {
 
-    public static final int capitalMax = 3000000;
-    public int Siret;
-    public String Nom;
-    public String adresse;
-    public Date date_Creation;
+    private static final int capitalMax = 3000000;
+    private int Siret;
+    private String Nom;
+    private String adresse;
+    private Date date_Creation;
 
+    /**
+     * Affiche status
+     */
     public void Afficher_statut() {
 
     }

@@ -7,15 +7,18 @@ public class Caisse {
 
     private String nom;
     private List<Item> items;
+    private int poidsMin;
+    private int poidsMax;
 
     /**
      * Constructeur
      *
      * @param nom
      */
-    public Caisse(String nom) {
+    public Caisse(String nom, int poidsMin, int poidsMax) {
         super();
         this.nom = nom;
+        this.poidsMax = poidsMax;
         this.items = new ArrayList<>();
     }
 
@@ -55,4 +58,11 @@ public class Caisse {
         this.items = items;
     }
 
+    public boolean canTake(Item item) {
+        return item.getPoids() <= poidsMax && item.getPoids() >= poidsMin ;
+    }
+
+    public int getTaille() {
+        return this.getItems().size();
+    }
 }

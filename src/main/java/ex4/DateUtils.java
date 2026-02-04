@@ -5,6 +5,8 @@ import java.util.Date;
 
 public class DateUtils {
 
+    private static String defautPattern = "dd/MM/yyyy";
+
     public static String format(String pattern, Date date) {
 
         SimpleDateFormat formateur = new SimpleDateFormat(pattern);
@@ -13,7 +15,6 @@ public class DateUtils {
 
     public static String formatDefaut(Date date) {
 
-        SimpleDateFormat formateur = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        return formateur.format(date);
+        return format(defautPattern, date);
     }
 }
